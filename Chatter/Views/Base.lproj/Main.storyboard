@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -247,18 +248,84 @@
             <point key="canvasLocation" x="979.71014492753636" y="385.71428571428572"/>
         </scene>
         <!--Chat View Controller-->
-        <scene sceneID="jAQ-Kq-w4x">
+        <scene sceneID="e9E-tO-WFy">
             <objects>
-                <viewController id="2Jh-R8-4Xu" customClass="ChatViewController" customModule="Chatter" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nfn-63-B4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="8hn-Te-9Rx" customClass="ChatViewController" customModule="Chatter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZLz-PJ-Z4q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGc-kA-g4C">
+                                <rect key="frame" x="0.0" y="818" width="414" height="78"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ShN-fu-0KU">
+                                        <rect key="frame" x="46" y="10" width="322" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="322" id="geV-uG-0la"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xas-cR-kib">
+                                        <rect key="frame" x="376" y="14" width="30" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="ry7-0G-ZzX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="paperplane" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ShN-fu-0KU" firstAttribute="top" secondItem="dGc-kA-g4C" secondAttribute="top" constant="10" id="4n3-pY-fyx"/>
+                                    <constraint firstItem="xas-cR-kib" firstAttribute="leading" secondItem="ShN-fu-0KU" secondAttribute="trailing" constant="8" symbolic="YES" id="4w3-2y-8RZ"/>
+                                    <constraint firstItem="xas-cR-kib" firstAttribute="top" secondItem="dGc-kA-g4C" secondAttribute="top" constant="14" id="9PT-6h-5fx"/>
+                                    <constraint firstAttribute="bottom" secondItem="ShN-fu-0KU" secondAttribute="bottom" constant="34" id="FTe-3z-SQU"/>
+                                    <constraint firstAttribute="height" constant="78" id="SdM-gJ-Dzf"/>
+                                    <constraint firstItem="ShN-fu-0KU" firstAttribute="centerX" secondItem="dGc-kA-g4C" secondAttribute="centerX" id="fgt-1A-YDY"/>
+                                    <constraint firstAttribute="bottom" secondItem="xas-cR-kib" secondAttribute="bottom" constant="42" id="me2-sm-mIh"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WXQ-7F-ki7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VgF-Pe-h60">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VgF-Pe-h60" id="eEr-7U-h1u">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aKm-eT-YOY"/>
+                        <color key="backgroundColor" name="BrandLightBlue"/>
+                        <constraints>
+                            <constraint firstItem="WXQ-7F-ki7" firstAttribute="leading" secondItem="aKm-eT-YOY" secondAttribute="leading" id="J7T-EZ-uUu"/>
+                            <constraint firstItem="dGc-kA-g4C" firstAttribute="leading" secondItem="aKm-eT-YOY" secondAttribute="leading" id="Saz-1B-MUE"/>
+                            <constraint firstItem="WXQ-7F-ki7" firstAttribute="top" secondItem="aKm-eT-YOY" secondAttribute="top" id="Sjg-ru-20M"/>
+                            <constraint firstItem="dGc-kA-g4C" firstAttribute="trailing" secondItem="aKm-eT-YOY" secondAttribute="trailing" id="Trv-64-2Hw"/>
+                            <constraint firstItem="dGc-kA-g4C" firstAttribute="top" secondItem="WXQ-7F-ki7" secondAttribute="bottom" id="WMZ-SN-BFB"/>
+                            <constraint firstAttribute="bottom" secondItem="dGc-kA-g4C" secondAttribute="bottom" id="e2w-gq-G0z"/>
+                            <constraint firstItem="WXQ-7F-ki7" firstAttribute="trailing" secondItem="aKm-eT-YOY" secondAttribute="trailing" id="zXH-oF-WgB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yy0-Fd-JYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="-11"/>
+            <point key="canvasLocation" x="2371.0144927536235" y="-48.214285714285715"/>
         </scene>
     </scenes>
     <resources>
+        <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandLightBlue">
             <color red="0.92199999094009399" green="0.98000001907348633" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
