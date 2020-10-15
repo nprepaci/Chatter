@@ -72,6 +72,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerButton:" destination="LnH-dw-HIv" eventType="touchUpInside" id="5Tp-24-MK9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -99,6 +102,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g0i-i6-XeR"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="mCi-1a-7V4" id="jxF-Ur-AKD"/>
+                        <outlet property="passwordTextField" destination="xku-XH-DbU" id="VVv-k6-Itl"/>
+                        <outlet property="registerButton" destination="qYM-S6-Xqo" id="JXe-Qn-V0U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjI-EA-eTU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,6 +222,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="PWD-r3-ISy" eventType="touchUpInside" id="Ec1-dC-yCG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -242,6 +253,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rf1-sQ-8nA"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="M9t-Qd-syh" id="Bce-LO-ncG"/>
+                        <outlet property="passwordTextField" destination="XfZ-L5-eA9" id="KVg-tv-fUB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zey-BS-z4p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
