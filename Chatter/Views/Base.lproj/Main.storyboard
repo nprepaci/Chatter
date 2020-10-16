@@ -131,8 +131,8 @@
                                     <segue destination="PWD-r3-ISy" kind="show" id="TVy-ir-xIP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chatter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPo-Vn-1Fs">
-                                <rect key="frame" x="117.5" y="412" width="179" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chatter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPo-Vn-1Fs" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                 <color key="textColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -357,6 +357,9 @@
             <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="iPo-Vn-1Fs"/>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="2lv-Tk-rn2"/>
     </inferredMetricsTieBreakers>
