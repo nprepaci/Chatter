@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LnH-dw-HIv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RKN-KU-FlF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="LnH-dw-HIv" customClass="RegisterViewController" customModule="Chatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jKb-RT-2bS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urM-uw-1uL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="195"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="195"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="9cn-QT-BEg">
                                         <rect key="frame" x="0.0" y="70" width="414" height="155"/>
@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9B-If-RO1">
-                                <rect key="frame" x="0.0" y="195" width="414" height="190"/>
+                                <rect key="frame" x="0.0" y="283" width="414" height="190"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="lXF-Bh-PdF">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
@@ -106,11 +106,12 @@
                         <outlet property="emailTextField" destination="mCi-1a-7V4" id="jxF-Ur-AKD"/>
                         <outlet property="passwordTextField" destination="xku-XH-DbU" id="VVv-k6-Itl"/>
                         <outlet property="registerButton" destination="qYM-S6-Xqo" id="JXe-Qn-V0U"/>
+                        <segue destination="8hn-Te-9Rx" kind="presentation" identifier="registerToChat" modalPresentationStyle="fullScreen" id="2lv-Tk-rn2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjI-EA-eTU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915.94202898550736" y="-540.40178571428567"/>
+            <point key="canvasLocation" x="2736.231884057971" y="-540.40178571428567"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -160,21 +161,25 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vbi-rV-BHB" secondAttribute="trailing" constant="10" id="vy9-1r-BTW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="pSk-5c-mft"/>
+                    <connections>
+                        <outlet property="chatterLabel" destination="iPo-Vn-1Fs" id="r9d-hA-Fsw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+            <point key="canvasLocation" x="1839.1304347826087" y="93.75"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Suv-yG-T81">
             <objects>
                 <viewController id="PWD-r3-ISy" customClass="LoginViewController" customModule="Chatter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kg2-R5-Xpk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycB-1L-qFu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="172"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="172"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="8Vm-Kp-yPi">
                                         <rect key="frame" x="0.0" y="56" width="414" height="155"/>
@@ -200,7 +205,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szb-Ow-ULc">
-                                <rect key="frame" x="0.0" y="172" width="414" height="172"/>
+                                <rect key="frame" x="0.0" y="260" width="414" height="172"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="J8M-lv-XdJ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
@@ -256,11 +261,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="M9t-Qd-syh" id="Bce-LO-ncG"/>
                         <outlet property="passwordTextField" destination="XfZ-L5-eA9" id="KVg-tv-fUB"/>
+                        <segue destination="8hn-Te-9Rx" kind="presentation" identifier="loginToChat" modalPresentationStyle="fullScreen" id="HRm-HA-KYb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zey-BS-z4p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979.71014492753636" y="385.71428571428572"/>
+            <point key="canvasLocation" x="2800" y="385.71428571428572"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="e9E-tO-WFy">
@@ -330,9 +336,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yy0-Fd-JYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2371.0144927536235" y="-48.214285714285715"/>
+            <point key="canvasLocation" x="4191.304347826087" y="-48.214285714285715"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r1H-iP-bXw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RKN-KU-FlF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jjq-Qm-Jnx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="a72-di-Xgz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zwn-0l-6V6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2lv-Tk-rn2"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <image name="textfield" width="298" height="93"/>
