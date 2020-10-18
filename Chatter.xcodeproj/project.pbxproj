@@ -16,7 +16,7 @@
 		7C5ED1792536AF3E0059843A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5ED1782536AF3E0059843A /* RegisterViewController.swift */; };
 		7C5ED17C2536AF4F0059843A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5ED17B2536AF4F0059843A /* LoginViewController.swift */; };
 		7C5ED17F2536AF5E0059843A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5ED17E2536AF5E0059843A /* ChatViewController.swift */; };
-		7CDBAF9F253BD9EF00399713 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CDBAF9E253BD9EF00399713 /* GoogleService-Info.plist */; };
+		7C6D5DD3253BFD670040B60C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C6D5DD2253BFD670040B60C /* GoogleService-Info.plist */; };
 		8127EE900A3C2A79C2D04584 /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A5370DE991E0AA42D04EF7 /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		7C5ED1782536AF3E0059843A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7C5ED17B2536AF4F0059843A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C5ED17E2536AF5E0059843A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		7CDBAF9E253BD9EF00399713 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7C6D5DD2253BFD670040B60C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A0A5370DE991E0AA42D04EF7 /* Pods_Chatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,7 +79,7 @@
 				7C5ED1622536ADAD0059843A /* Assets.xcassets */,
 				7C5ED1642536ADAD0059843A /* LaunchScreen.storyboard */,
 				7C5ED1672536ADAD0059843A /* Info.plist */,
-				7CDBAF9E253BD9EF00399713 /* GoogleService-Info.plist */,
+				7C6D5DD2253BFD670040B60C /* GoogleService-Info.plist */,
 			);
 			path = Chatter;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C5ED1662536ADAD0059843A /* LaunchScreen.storyboard in Resources */,
-				7CDBAF9F253BD9EF00399713 /* GoogleService-Info.plist in Resources */,
+				7C6D5DD3253BFD670040B60C /* GoogleService-Info.plist in Resources */,
 				7C5ED1632536ADAD0059843A /* Assets.xcassets in Resources */,
 				7C5ED1612536ADAA0059843A /* Main.storyboard in Resources */,
 			);
