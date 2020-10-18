@@ -10,22 +10,22 @@ import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var chatterLabel: CLTypingLabel!
+    @IBOutlet weak var chatterLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //no longer using cltypinglabel, too much of a delay
         //setting the label in viewdidload with chatterLabel as type CLTypingLabel animates the label
         //Also changed the class of the label in the storyboard to CLTypingLabel, was originally blank
-        chatterLabel.text = "Chatter"
-        //printChatterCharacters()
+        //chatterLabel.text = "Chatter"
+        printChatterCharacters()
         
         self.navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
     }
     
     
-    //Utilizing CLTypingLabel pod to handle this function, this is no longer needed
     //Function prints the words in the Chatter label one by one
     func printChatterCharacters() {
         var charIndex = 0.0

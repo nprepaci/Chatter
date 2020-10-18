@@ -8,6 +8,8 @@ target 'Chatter' do
   # Pods for Chatter
   
   pod 'CLTypingLabel'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 
 
