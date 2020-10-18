@@ -34,6 +34,7 @@ class RegisterViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 //error is also an optional
                 //future iteration: instead of printing error, relay error message from firebase to user via notification etc.
+                //probably need some sort of switch statement. Need to look up errors in documentation and set that up
                 if let e = error {
                     print(e.localizedDescription)
                 } else {

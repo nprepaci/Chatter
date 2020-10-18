@@ -219,7 +219,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="329" id="cFq-0C-W0N"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ5-hi-A3q">
                                         <rect key="frame" x="172" y="107" width="70" height="48"/>
@@ -358,7 +358,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2lv-Tk-rn2"/>
+        <segue reference="HRm-HA-KYb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane" catalog="system" width="128" height="118"/>
