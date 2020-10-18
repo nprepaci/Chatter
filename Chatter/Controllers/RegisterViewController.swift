@@ -35,7 +35,7 @@ class RegisterViewController: UIViewController {
                 //error is also an optional
                 //future iteration: instead of printing error, relay error message from firebase to user via notification etc.
                 if let e = error {
-                    print(e)
+                    print(e.localizedDescription)
                 } else {
                     //added self because inside a closure
                     self.performSegue(withIdentifier: "registerToChat", sender: self)
