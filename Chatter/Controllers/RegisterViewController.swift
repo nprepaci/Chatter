@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController {
                     print(e.localizedDescription)
                 } else {
                     //added self because inside a closure
-                    self.performSegue(withIdentifier: "registerToChat", sender: self)
+                    self.performSegue(withIdentifier: Constants.registerToChatSegue, sender: self)
                 }
               // ...
             }
