@@ -43,6 +43,7 @@
 		7C6D5DD9253CEBB90040B60C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		7C6D5DDC253CF2AE0040B60C /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		7C6D5DDD253CF2AE0040B60C /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		7CF994672547B9F300AB1ECE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A0A5370DE991E0AA42D04EF7 /* Pods_Chatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,6 +80,7 @@
 		7C5ED1582536ADA90059843A /* Chatter */ = {
 			isa = PBXGroup;
 			children = (
+				7CF994672547B9F300AB1ECE /* README.md */,
 				7C5ED1592536ADAA0059843A /* AppDelegate.swift */,
 				7C6D5DD5253CE8010040B60C /* Constants.swift */,
 				7C5ED15B2536ADAA0059843A /* SceneDelegate.swift */,

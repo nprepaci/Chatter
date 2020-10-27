@@ -1,5 +1,5 @@
 # Chatter
-Messaging app utilizing firebase
+Messaging app utilizing FIrebase real-time database to authenticate users, send messages, and receive messages.
 
 App is still a work in progress.
 

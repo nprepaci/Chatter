@@ -56,7 +56,7 @@ class ChatViewController: UIViewController {
                             
                             //reloads the tableview to display any new messages once load messages fuction completes
                             //necessary due to message time variance based on internet connection speed
-                            //since this is happening in a closue, which means it is happening in the background, calling the main thread
+                            //since this is happening in a closue, which means it is happening in the background, calling the main thread once funciton is completed
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
                             }
