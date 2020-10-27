@@ -62,6 +62,7 @@
 		7C5ED14D2536ADA90059843A = {
 			isa = PBXGroup;
 			children = (
+				7CF994672547B9F300AB1ECE /* README.md */,
 				7C5ED1582536ADA90059843A /* Chatter */,
 				7C5ED1572536ADA90059843A /* Products */,
 				9787EFE0790DE46E2F8F1489 /* Pods */,
@@ -80,7 +81,6 @@
 		7C5ED1582536ADA90059843A /* Chatter */ = {
 			isa = PBXGroup;
 			children = (
-				7CF994672547B9F300AB1ECE /* README.md */,
 				7C5ED1592536ADAA0059843A /* AppDelegate.swift */,
 				7C6D5DD5253CE8010040B60C /* Constants.swift */,
 				7C5ED15B2536ADAA0059843A /* SceneDelegate.swift */,
