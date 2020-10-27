@@ -40,8 +40,14 @@ class ChatViewController: UIViewController {
     
     //gets new messages and appends to messages array - which then displays in the table view
     func loadMessages() {
-        messages = []
-        db.collection(Constants.FStore.collectionName).getDocuments { (querySnapshot, error) in
+        
+        //added snapshotlistener in db.collections instead of just grabbing documents
+        //snapshot listener is a listener to activey reload as necessary
+        db.collection(Constants.FStore.collectionName).addSnapshotListener { (querySnapshot, error) in
+            
+            //emptying messages array inside closue so it does not return duplicate messages
+            self.messages = []
+            
             if let e = error {
                 print("there was an issue retrieving data from Firestore. \(e)")
                 
