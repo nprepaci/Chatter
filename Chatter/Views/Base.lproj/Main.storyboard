@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RKN-KU-FlF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -213,7 +213,7 @@
                                             <constraint firstAttribute="height" constant="155" id="ctI-8K-bQT"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="email3@gmail.com" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XfZ-L5-eA9">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XfZ-L5-eA9">
                                         <rect key="frame" x="42.5" y="28" width="329" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="329" id="cFq-0C-W0N"/>
@@ -293,6 +293,9 @@
                                             <constraint firstAttribute="width" constant="35" id="K9e-7d-Dcg"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="paperplane" catalog="system"/>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="8hn-Te-9Rx" eventType="touchUpInside" id="Lei-Rv-Kve"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -330,6 +333,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="logoutButtonPressed" destination="azt-Px-fnB" id="ccl-O5-qjF"/>
+                        <outlet property="messageTextField" destination="ShN-fu-0KU" id="Ok9-VX-Nub"/>
                         <outlet property="tableView" destination="WXQ-7F-ki7" id="7Xk-Ca-jK8"/>
                     </connections>
                 </viewController>

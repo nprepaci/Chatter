@@ -10,8 +10,12 @@ import UIKit
 
 class ChatViewController: UIViewController {
     
+    let db = Firestore.firestore()
+    
     @IBOutlet weak var logoutButtonPressed: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageTextField: UITextField!
+    
     
     var messages: [Message] = [Message(sender: "email3@gmail.com", body: "long message to test rounded corner dynamic piece abcd123 abcbcbcbcbcbcbcbcbcb 12312312312312312312312312 456456456456456456456"), Message(sender: "email99@gmail.com", body: "sup?"), Message(sender: "email14@gmail.com", body: "howdy"),]
     
@@ -29,7 +33,58 @@ class ChatViewController: UIViewController {
         //hides back button
         navigationItem.hidesBackButton = true
         navigationItem.title = "Messages"
+        
+        loadMessages()
     }
+    
+    
+    //gets new messages and appends to messages array - which then displays in the table view
+    func loadMessages() {
+        messages = []
+        db.collection(Constants.FStore.collectionName).getDocuments { (querySnapshot, error) in
+            if let e = error {
+                print("there was an issue retrieving data from Firestore. \(e)")
+                
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let messageSender = data[Constants.FStore.senderField] as? String, let messageBody = data[Constants.FStore.bodyField] as? String {
+                            let newMessage = Message(sender: messageSender, body: messageBody)
+                            
+                            self.messages.append(newMessage)
+                            
+                            //reloads the tableview to display any new messages once load messages fuction completes
+                            //necessary due to message time variance based on internet connection speed
+                            //since this is happening in a closue, which means it is happening in the background, calling the main thread
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @IBAction func sendPressed(_ sender: Any) {
+        
+        //if message text field is not nil and message sender email is not nil, then save in each of the constants, then run if statement
+        if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
+            
+            db.collection(Constants.FStore.collectionName).addDocument(data: [ Constants.FStore.senderField: messageSender, Constants.FStore.bodyField: messageBody ]) { (error) in
+                if let e = error {
+                    print("There was an issue saving data to firestore, \(e)")
+                } else {
+                    print("successfully saved data")
+                }
+            }
+            
+        }
+    }
+    
+    
+    
     
     @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
         let firebaseAuth = Auth.auth()
