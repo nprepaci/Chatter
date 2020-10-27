@@ -17,7 +17,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageTextField: UITextField!
     
     
-    var messages: [Message] = [Message(sender: "email3@gmail.com", body: "long message to test rounded corner dynamic piece abcd123 abcbcbcbcbcbcbcbcbcb 12312312312312312312312312 456456456456456456456"), Message(sender: "email99@gmail.com", body: "sup?"), Message(sender: "email14@gmail.com", body: "howdy"),]
+    var messages: [Message] = [Message(sender: "email3@gmail.com", body: "test")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +41,10 @@ class ChatViewController: UIViewController {
     //gets new messages and appends to messages array - which then displays in the table view
     func loadMessages() {
         
+        //added order by date to order by date parameter passed to firebade in sendPressed - this will allow for messages to be sorted in ascending order
         //added snapshotlistener in db.collections instead of just grabbing documents
         //snapshot listener is a listener to activey reload as necessary
-        db.collection(Constants.FStore.collectionName).addSnapshotListener { (querySnapshot, error) in
+        db.collection(Constants.FStore.collectionName).order(by: Constants.FStore.dateField).addSnapshotListener { (querySnapshot, error) in
             
             //emptying messages array inside closue so it does not return duplicate messages
             self.messages = []
@@ -78,7 +79,11 @@ class ChatViewController: UIViewController {
         //if message text field is not nil and message sender email is not nil, then save in each of the constants, then run if statement
         if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
             
-            db.collection(Constants.FStore.collectionName).addDocument(data: [ Constants.FStore.senderField: messageSender, Constants.FStore.bodyField: messageBody ]) { (error) in
+            db.collection(Constants.FStore.collectionName).addDocument(data: [
+                Constants.FStore.senderField: messageSender,
+                Constants.FStore.bodyField: messageBody,
+                Constants.FStore.dateField: Date().timeIntervalSince1970
+            ]) { (error) in
                 if let e = error {
                     print("There was an issue saving data to firestore, \(e)")
                 } else {
