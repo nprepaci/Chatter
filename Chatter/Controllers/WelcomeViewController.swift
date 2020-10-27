@@ -12,6 +12,12 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var chatterLabel: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,7 +27,7 @@ class WelcomeViewController: UIViewController {
         //chatterLabel.text = "Chatter"
         printChatterCharacters()
         
-        self.navigationController?.isNavigationBarHidden = true
+   
         // Do any additional setup after loading the view.
     }
     

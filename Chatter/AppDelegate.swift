@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //print(db)
         
         IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        //allows clicking outside keyboard to dismiss
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         return true
     }

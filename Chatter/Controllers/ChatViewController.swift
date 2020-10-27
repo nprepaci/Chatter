@@ -66,6 +66,10 @@ class ChatViewController: UIViewController {
                             //since this is happening in a closue, which means it is happening in the background, calling the main thread once funciton is completed
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                
+                                //finds most recent row in messages array (-1 si it is not out of bounds in the array) and then runs scroll to row to display most recent row in the view controller
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0) //zero because we only have one section
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                             }
                         }
                     }
@@ -114,17 +118,37 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //calls func for as many messages there are and makes cells for them
         return messages.count
     }
     
     //function below gets called for each number in the count above messages.count
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell //casted as messagecell class
         
         //returns the body of the message for each row (indexpath.row returns the number ocrresponding to each row i.e. 1, 2, 3)
         //the label in cell.label is found in the messagecell.swift class, able to access this because I casted the cell above as type messageCell (aka the messagecell.swift file)
         //due to this no longer needed the prototype cell in the tableview
         cell.label.text = messages[indexPath.row].body
+        
+        //if message sender == current user email, returns appropriate chat bubble and icon
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor.systemTeal
+            cell.label.textColor = UIColor.systemPurple
+            
+        }
+        //case if this is from not the current user, display the received style message
+        else {
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: "BrandPurple")
+            cell.label.textColor = UIColor(named: "BrandLightPurple")
+        }
+       
         return cell
     }
     

@@ -1,7 +1,7 @@
 # Chatter
 Messaging app utilizing FIrebase real-time database to authenticate users, send messages, and receive messages.
 
-App is still a work in progress.
+To simulate sending and receiving messages, you must create two separate accounts. Send messages from both accounts. They will display in a traditional messages format. 
 
 Please note: GoogleService-info.plist has been removed. In order to utilize authentication & messaging, you will need to set up your own firebase environment.
 
